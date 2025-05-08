@@ -6,10 +6,8 @@ spacy.load('en_core_web_sm')
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 # Creating ChatBot Instance
-chatbot = ChatBot('<b>CRCE BOT</b>')
-
 # nlp = spacy.load("en_core_web_sm")
-
+# Ensure this is the ONLY ChatBot instantiation
 chatbot = ChatBot(
     'ChatBot for College Enquiry',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
@@ -20,7 +18,7 @@ chatbot = ChatBot(
             'maximum_similarity_threshold': 0.90
         }
     ],
-    database_uri='postgresql://postgres:450506@localhost:5432/register_db'   
+    database_uri='sqlite:///crce_chatbot_db.sqlite3'   
 ) 
 trainer = ListTrainer(chatbot)
 
