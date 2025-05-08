@@ -1,4 +1,5 @@
 Flask
+
 chatterbot
 chatterbot-corpus
 pip
@@ -9,3 +10,4 @@ en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_
 Flask-reCaptcha
 mysql-connector-python
 mysql-connector-python-rf
+psycopg2
